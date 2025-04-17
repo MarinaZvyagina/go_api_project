@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/redis/go-redis/v9"
 
-	"example.com/project/auth"
+	"go_api_project/auth"
 )
 
 var (
