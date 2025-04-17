@@ -7,10 +7,15 @@ This project demonstrates how to build a REST API in Go with:
 - Gin for routing and middleware
 - Rate limiting to prevent brute force attacks
 
+## Install requirement tools:
+Docker - https://www.docker.com/products/docker-desktop/
+Go - https://go.dev/dl/
+
 ## Running the project
 
 ```bash
 docker-compose up --build
+```
 
 API will be available at: http://localhost:8080
 
@@ -26,7 +31,12 @@ Usage examples:
 
 get otp:
 
+```bash
 % curl -X POST http://localhost:8080/login -H "Content-Type: application/json" -d '{"phone": "79991234567"}
+```
 
 verify otp:
+
+```bash
 curl -X POST http://localhost:8080/verify -H "Content-Type: application/json" -d '{"phone": "79991234567", "otp": "543269"}'
+```
