@@ -22,3 +22,11 @@ POST /refresh — refresh access token
 POST /logout — logout
 GET /me — protected route
 
+Usage examples:
+
+get otp:
+
+% curl -X POST http://localhost:8080/login -H "Content-Type: application/json" -d '{"phone": "79991234567"}
+
+verify otp:
+curl -X POST http://localhost:8080/verify -H "Content-Type: application/json" -d '{"phone": "79991234567", "otp": "543269"}'
